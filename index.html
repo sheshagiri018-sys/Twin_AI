@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UniTwin AI — Universal Self-Learning Digital Twin Platform</title>
+<meta name="description" content="UniTwin AI is an AI-driven, self-learning Digital Twin platform for predictive monitoring and maintenance of machines. IoT + Edge AI + Cloud Intelligence.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Custom cursor (desktop only, disabled automatically on touch / reduced motion) -->
+<div id="cursorDot" aria-hidden="true"></div>
+<div id="cursorRing" aria-hidden="true"></div>
+
+<!-- ============ LOADER ============ -->
+<div id="loader">
+  <div class="loader-grid"></div>
+  <svg id="loaderSvg" viewBox="0 0 800 400"></svg>
+  <div class="loader-title">UniTwin<span>AI</span></div>
+  <div class="loader-status" id="loaderStatus">INITIALIZING UNITWIN AI</div>
+  <div class="loader-bar"><div class="loader-bar-fill" id="loaderBarFill"></div></div>
+</div>
+
+<!-- ============ NAV ============ -->
+<nav id="mainNav">
+  <div class="nav-inner">
+    <div class="nav-brand">UniTwin<span>AI</span></div>
+    <ul class="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#problem">Problem</a></li>
+      <li><a href="#solution">Solution</a></li>
+      <li><a href="#architecture">Architecture</a></li>
+      <li><a href="#twin">Digital Twin</a></li>
+      <li><a href="#ai-engine">AI Engine</a></li>
+      <li><a href="#dashboard">Dashboard</a></li>
+      <li><a href="#hardware">Hardware</a></li>
+      <li><a href="#applications">Applications</a></li>
+      <li><a href="#future">Future</a></li>
+    </ul>
+    <div class="nav-status"><span class="dot"></span>SYSTEM ONLINE</div>
+    <button id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header id="home" class="hero">
+  <canvas id="heroCanvas"></canvas>
+  <div id="hero3D" class="hero-3d-mount"></div>
+  <div class="hero-grid-overlay"></div>
+  <div class="hero-sensor-overlay" id="heroSensorOverlay"></div>
+  <div class="hero-content">
+    <p class="eyebrow">UNIVERSAL INDUSTRIAL INTELLIGENCE PLATFORM</p>
+    <h1>UniTwin <span>AI</span></h1>
+    <h2>Every Machine. One Intelligent Twin.</h2>
+    <p class="hero-desc">An AI-powered Digital Twin platform that transforms real-world machines into self-learning, predictive, and intelligent assets.</p>
+    <div class="tech-tags">
+      <span>IoT</span><span>Edge AI</span><span>MQTT</span><span>Cloud</span><span>Digital Twin</span><span>Predictive Maintenance</span>
+    </div>
+    <div class="hero-actions">
+      <a href="#twin" class="btn btn-primary">Explore Digital Twin</a>
+      <a href="#architecture" class="btn btn-secondary">View System Architecture</a>
+    </div>
+  </div>
+  <div class="scroll-cue"><span></span>SCROLL</div>
+</header>
+
+<main>
+
+<!-- ============ PROBLEM ============ -->
+<section id="problem" class="section">
+  <canvas id="problemCanvas" class="section-bg-canvas"></canvas>
+  <div class="section-inner">
+    <p class="section-eyebrow">01 — THE PROBLEM</p>
+    <h2 class="section-title">Machines Generate Data.<br>But Data Alone Isn't Intelligence.</h2>
+    <p class="section-lead">Traditional monitoring systems primarily provide raw sensor readings. They often lack the capability to:</p>
+    <div class="gap-grid">
+      <div class="gap-item">Understand machine behavior</div>
+      <div class="gap-item">Identify abnormal patterns</div>
+      <div class="gap-item">Detect early-stage faults</div>
+      <div class="gap-item">Predict failures</div>
+      <div class="gap-item">Estimate machine health</div>
+      <div class="gap-item">Predict remaining useful life</div>
+      <div class="gap-item">Provide proactive maintenance recommendations</div>
+    </div>
+    <div class="consequence-row">
+      <div class="consequence"><strong>Unexpected Failures</strong></div>
+      <div class="consequence"><strong>Unplanned Downtime</strong></div>
+      <div class="consequence"><strong>Higher Maintenance Costs</strong></div>
+      <div class="consequence"><strong>Reduced Equipment Reliability</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOLUTION ============ -->
+<section id="solution" class="section section-alt">
+  <div class="section-inner">
+    <p class="section-eyebrow">02 — THE SOLUTION</p>
+    <h2 class="section-title">Meet UniTwin AI</h2>
+    <p class="section-lead">UniTwin AI converts a physical machine into an intelligent digital representation using IoT sensing, edge computing, cloud infrastructure, AI/ML analytics, and Digital Twin technology.</p>
+    <div class="flow-vertical" id="solutionFlow">
+      <div class="flow-node" data-i="0">PHYSICAL MACHINE</div>
+      <div class="flow-node" data-i="1">SENSOR DATA</div>
+      <div class="flow-node" data-i="2">EDGE PROCESSING</div>
+      <div class="flow-node" data-i="3">CLOUD INTELLIGENCE</div>
+      <div class="flow-node" data-i="4">AI ENGINE</div>
+      <div class="flow-node" data-i="5">DIGITAL TWIN</div>
+      <div class="flow-node accent" data-i="6">PREDICTIVE DECISIONS</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ARCHITECTURE ============ -->
+<section id="architecture" class="section">
+  <div class="section-inner wide">
+    <p class="section-eyebrow">03 — SYSTEM ARCHITECTURE</p>
+    <h2 class="section-title">End-to-End Signal Path</h2>
+    <p class="section-lead">Hover or tap any block to trace how data moves through UniTwin AI, from the physical asset to the intelligence layer.</p>
+    <div class="arch-wrap">
+      <svg id="archSvg" viewBox="0 0 1400 320" preserveAspectRatio="xMidYMid meet"></svg>
+      <div id="archTooltip" class="arch-tooltip"></div>
+    </div>
+    <button id="fullArchBtn" class="btn btn-outline">Open Full System Architecture</button>
+  </div>
+</section>
+
+<!-- ============ SENSOR LAYER ============ -->
+<section id="sensors" class="section section-alt">
+  <div class="section-inner">
+    <p class="section-eyebrow">04 — SENSOR LAYER</p>
+    <h2 class="section-title">Reading The Machine's Vital Signs</h2>
+    <div class="sensor-grid" id="sensorGrid"></div>
+    <div id="sensorDetail" class="sensor-detail"></div>
+  </div>
+</section>
+
+<!-- ============ ESP32 EDGE ============ -->
+<section id="edge" class="section">
+  <div class="section-inner">
+    <p class="section-eyebrow">05 — EDGE INTELLIGENCE</p>
+    <h2 class="section-title">ESP32 Edge Device</h2>
+    <div class="edge-layout">
+      <div class="edge-visual">
+        <canvas id="edgeCanvas"></canvas>
+      </div>
+      <ul class="edge-functions">
+        <li>Data acquisition</li>
+        <li>Signal processing</li>
+        <li>Local filtering</li>
+        <li>Feature extraction</li>
+        <li>Data packaging</li>
+        <li>Edge-level decision making</li>
+        <li>Wi-Fi communication</li>
+        <li>MQTT communication</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MQTT / CLOUD ============ -->
+<section id="cloud" class="section section-alt">
+  <div class="section-inner">
+    <p class="section-eyebrow">06 — COMMUNICATION &amp; CLOUD</p>
+    <h2 class="section-title">MQTT Link to Cloud Platform</h2>
+    <div class="comm-flow" id="commFlow">
+      <div class="comm-node">ESP32</div>
+      <div class="comm-arrow"></div>
+      <div class="comm-node">Wi-Fi</div>
+      <div class="comm-arrow"></div>
+      <div class="comm-node">MQTT</div>
+      <div class="comm-arrow"></div>
+      <div class="comm-node accent">Cloud Platform</div>
+    </div>
+    <p class="note-text">MQTT provides lightweight communication between the edge device and cloud platform.</p>
+    <div class="cloud-components">
+      <div class="cloud-chip">MQTT Broker</div>
+      <div class="cloud-chip">Database</div>
+      <div class="cloud-chip">Data Storage</div>
+      <div class="cloud-chip">Device Management</div>
+      <div class="cloud-chip">Real-Time Synchronization</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AI ENGINE ============ -->
+<section id="ai-engine" class="section section-dark">
+  <canvas id="aiCanvas" class="section-bg-canvas"></canvas>
+  <div class="section-inner">
+    <p class="section-eyebrow accent-text">07 — THE INTELLIGENCE LAYER</p>
+    <h2 class="section-title">AI Engine</h2>
+    <div class="ai-flow">
+      <span>Raw Sensor Data</span><span class="chev">›</span>
+      <span>Data Processing</span><span class="chev">›</span>
+      <span>Feature Extraction</span><span class="chev">›</span>
+      <span>AI/ML Analysis</span><span class="chev">›</span>
+      <span class="accent">Machine Health Intelligence</span>
+    </div>
+    <div class="ai-cards">
+      <div class="ai-card"><h3>Anomaly Detection</h3><p>Detects abnormal operating patterns.</p></div>
+      <div class="ai-card"><h3>Trend Analysis</h3><p>Identifies changes in machine behavior over time.</p></div>
+      <div class="ai-card"><h3>Failure Prediction</h3><p>Predicts potential equipment failures.</p></div>
+      <div class="ai-card"><h3>Health Score</h3><p>Generates an overall machine health indicator.</p></div>
+      <div class="ai-card"><h3>Remaining Useful Life</h3><p>Estimates remaining operational life.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIGITAL TWIN ============ -->
+<section id="twin" class="section">
+  <div class="section-inner wide">
+    <p class="section-eyebrow">08 — DIGITAL TWIN</p>
+    <h2 class="section-title">Your Machine. Digitally Alive.</h2>
+    <span class="tag-badge">SIMULATED PROTOTYPE DATA</span>
+
+    <div class="twin-layout">
+      <div class="twin-visual-wrap">
+        <canvas id="twinCanvas"></canvas>
+        <div id="twin3D" class="twin-3d-mount"></div>
+        <div class="twin-status">
+          <div class="twin-status-label">STATUS</div>
+          <div class="twin-status-value" id="twinStatusValue">HEALTHY</div>
+        </div>
+        <div class="twin-3d-controls" id="twin3DControls">
+          <button id="explodeBtn" class="chip-btn">Exploded View</button>
+          <button id="anomalyBtn" class="chip-btn warn">Simulate Anomaly</button>
+        </div>
+        <div id="anomalyLog" class="anomaly-log"></div>
+      </div>
+
+      <div class="twin-panel">
+        <div class="twin-health">
+          <svg id="healthGauge" viewBox="0 0 200 200"></svg>
+          <div class="health-num" id="healthNum">92%</div>
+        </div>
+        <div class="twin-readouts" id="twinReadouts">
+          <div class="readout"><span class="r-label">Voltage</span><span class="r-value" id="rVoltage">230.4 V</span></div>
+          <div class="readout"><span class="r-label">Current</span><span class="r-value" id="rCurrent">1.25 A</span></div>
+          <div class="readout"><span class="r-label">Temperature</span><span class="r-value" id="rTemp">32.6 °C</span></div>
+          <div class="readout"><span class="r-label">Humidity</span><span class="r-value" id="rHumidity">56.2 %</span></div>
+          <div class="readout"><span class="r-label">Vibration</span><span class="r-value" id="rVibration">2.1 mm/s</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sim-controls">
+      <p class="section-eyebrow small">INTERACTIVE MACHINE SIMULATION</p>
+      <div class="sliders-grid">
+        <div class="slider-item">
+          <label>Temperature <span id="tempOut">32.6 °C</span></label>
+          <input type="range" id="tempSlider" min="20" max="120" value="32.6" step="0.1">
+        </div>
+        <div class="slider-item">
+          <label>Current <span id="currOut">1.25 A</span></label>
+          <input type="range" id="currSlider" min="0" max="15" value="1.25" step="0.05">
+        </div>
+        <div class="slider-item">
+          <label>Voltage <span id="voltOut">230.4 V</span></label>
+          <input type="range" id="voltSlider" min="180" max="280" value="230.4" step="0.1">
+        </div>
+        <div class="slider-item">
+          <label>Vibration <span id="vibOut">2.1 mm/s</span></label>
+          <input type="range" id="vibSlider" min="0" max="20" value="2.1" step="0.1">
+        </div>
+        <div class="slider-item">
+          <label>Humidity <span id="humOut">56.2 %</span></label>
+          <input type="range" id="humSlider" min="0" max="100" value="56.2" step="0.1">
+        </div>
+      </div>
+      <button id="resetSimBtn" class="btn btn-outline small">Reset to Normal</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DASHBOARD ============ -->
+<section id="dashboard" class="section section-alt">
+  <div class="section-inner wide">
+    <p class="section-eyebrow">09 — LIVE INDUSTRIAL DASHBOARD</p>
+    <h2 class="section-title">UniTwin Control Center</h2>
+    <span class="tag-badge">SIMULATED LIVE DATA</span>
+
+    <div class="dash-grid">
+      <div class="dash-card status-card">
+        <div class="dash-card-label">MACHINE STATUS</div>
+        <div class="dash-card-value" id="dashStatus">RUNNING</div>
+      </div>
+      <div class="dash-card">
+        <div class="dash-card-label">HEALTH SCORE</div>
+        <div class="dash-card-value" id="dashHealth">92 / 100</div>
+      </div>
+      <div class="dash-card"><div class="dash-card-label">VOLTAGE</div><div class="dash-card-value" id="dashVolt">230.4 V</div></div>
+      <div class="dash-card"><div class="dash-card-label">CURRENT</div><div class="dash-card-value" id="dashCurr">1.25 A</div></div>
+      <div class="dash-card"><div class="dash-card-label">TEMPERATURE</div><div class="dash-card-value" id="dashTemp">32.6 °C</div></div>
+      <div class="dash-card"><div class="dash-card-label">HUMIDITY</div><div class="dash-card-value" id="dashHum">56.2 %</div></div>
+      <div class="dash-card"><div class="dash-card-label">VIBRATION</div><div class="dash-card-value" id="dashVib">2.1 mm/s</div></div>
+      <div class="dash-card"><div class="dash-card-label">POWER</div><div class="dash-card-value" id="dashPower">285 W</div></div>
+    </div>
+
+    <div class="dash-charts">
+      <div class="chart-box"><h4>Temperature Trend</h4><canvas id="chartTemp"></canvas></div>
+      <div class="chart-box"><h4>Current Trend</h4><canvas id="chartCurr"></canvas></div>
+      <div class="chart-box"><h4>Vibration Trend</h4><canvas id="chartVib"></canvas></div>
+      <div class="chart-box"><h4>Machine Health</h4><canvas id="chartHealth"></canvas></div>
+    </div>
+
+    <div class="alert-console">
+      <h4>ALERT CONSOLE</h4>
+      <div id="alertList" class="alert-list"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PREDICTIVE MAINTENANCE ============ -->
+<section id="predictive" class="section">
+  <div class="section-inner">
+    <p class="section-eyebrow">10 — FROM MONITORING TO PREDICTION</p>
+    <h2 class="section-title">Beyond Reactive Monitoring</h2>
+    <div class="compare-grid">
+      <div class="compare-col">
+        <h4>Traditional Monitoring</h4>
+        <div class="compare-flow">Measure <span>→</span> Display <span>→</span> React</div>
+      </div>
+      <div class="compare-col accent-col">
+        <h4>UniTwin AI</h4>
+        <div class="compare-flow">Measure <span>→</span> Learn <span>→</span> Detect <span>→</span> Predict <span>→</span> Act</div>
+      </div>
+    </div>
+
+    <div class="pm-timeline" id="pmTimeline">
+      <div class="pm-step">Normal Operation</div>
+      <div class="pm-step">Early Anomaly</div>
+      <div class="pm-step">Degradation</div>
+      <div class="pm-step">Predicted Failure</div>
+      <div class="pm-step">Maintenance</div>
+      <div class="pm-step">Restored Health</div>
+    </div>
+    <p class="disclaimer">Early detection can support proactive maintenance planning. This does not represent a guaranteed failure prediction.</p>
+  </div>
+</section>
+
+<!-- ============ HARDWARE ============ -->
+<section id="hardware" class="section section-alt">
+  <div class="section-inner wide">
+    <p class="section-eyebrow">11 — HARDWARE PROTOTYPE</p>
+    <h2 class="section-title">From Digital Concept to Physical Prototype</h2>
+    <span class="tag-badge">PROTOTYPE</span>
+
+    <div class="hw-photos" id="hwPhotos">
+      <img src="assets/prototype.png" alt="UniTwin AI breadboard prototype with ESP32, sensors and OLED display">
+    </div>
+
+    <div class="hw-table-wrap">
+      <table class="hw-table">
+        <thead><tr><th>Component</th><th>Purpose</th></tr></thead>
+        <tbody>
+          <tr><td>ESP32 Dev Board</td><td>Main controller with Wi-Fi</td></tr>
+          <tr><td>ACS712 Current Sensor</td><td>Measure AC current</td></tr>
+          <tr><td>ZMPT101B Voltage Sensor</td><td>Measure AC voltage</td></tr>
+          <tr><td>DHT22 Sensor</td><td>Temperature &amp; humidity</td></tr>
+          <tr><td>MPU6050 Sensor</td><td>Vibration / motion</td></tr>
+          <tr><td>OLED Display (0.96")</td><td>Local data display</td></tr>
+          <tr><td>Buzzer</td><td>Alert / alarm</td></tr>
+          <tr><td>LEDs</td><td>Status indicators</td></tr>
+          <tr><td>Breadboard &amp; Jumper Wires</td><td>Connections</td></tr>
+          <tr><td>USB Power Supply</td><td>5V power</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="sub-heading">Connection Map</h3>
+    <div class="conn-map" id="connMap"></div>
+  </div>
+</section>
+
+<!-- ============ SOFTWARE STACK ============ -->
+<section id="stack" class="section">
+  <div class="section-inner">
+    <p class="section-eyebrow">12 — SOFTWARE &amp; TECHNOLOGY STACK</p>
+    <h2 class="section-title">Technology Ecosystem</h2>
+    <div class="stack-grid">
+      <div class="stack-col"><h4>Hardware</h4><p>ESP32 · Sensors · OLED · LEDs · Buzzer</p></div>
+      <div class="stack-col"><h4>Development</h4><p>Arduino IDE · ESP-IDF · VS Code</p></div>
+      <div class="stack-col"><h4>Communication</h4><p>Wi-Fi · MQTT</p></div>
+      <div class="stack-col"><h4>Cloud</h4><p>Firebase / Cloud Database</p></div>
+      <div class="stack-col"><h4>AI</h4><p>Machine Learning · Anomaly Detection · Predictive Analytics</p></div>
+      <div class="stack-col"><h4>Application</h4><p>Flutter · Web Dashboard · Mobile Dashboard</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ UNIVERSAL / APPLICATIONS ============ -->
+<section id="applications" class="section section-alt">
+  <div class="section-inner wide">
+    <p class="section-eyebrow">13 — ONE PLATFORM. MANY MACHINES.</p>
+    <h2 class="section-title">Real-World Applications</h2>
+    <p class="section-lead">These represent potential application scenarios, not necessarily currently implemented hardware.</p>
+    <div class="app-grid" id="appGrid">
+      <div class="app-card" data-app="motor"><h4>Industrial Motors</h4><p>Predictive maintenance and condition monitoring.</p></div>
+      <div class="app-card" data-app="pump"><h4>Pumps</h4><p>Detect abnormal vibration and operating conditions.</p></div>
+      <div class="app-card" data-app="hvac"><h4>HVAC Systems</h4><p>Monitor temperature, current, and efficiency.</p></div>
+      <div class="app-card" data-app="solar"><h4>Solar Plants</h4><p>Monitor electrical and environmental parameters.</p></div>
+      <div class="app-card" data-app="factory"><h4>Smart Factories</h4><p>Support Industry 4.0 monitoring.</p></div>
+      <div class="app-card" data-app="fleet"><h4>Fleet Management</h4><p>Monitor machine and vehicle health.</p></div>
+    </div>
+    <div id="appDetail" class="app-detail"></div>
+  </div>
+</section>
+
+<!-- ============ ADVANTAGES ============ -->
+<section id="advantages" class="section">
+  <div class="section-inner">
+    <p class="section-eyebrow">14 — KEY ADVANTAGES</p>
+    <h2 class="section-title">Built To Scale</h2>
+    <div class="adv-grid">
+      <div class="adv-item"><h4>Universal</h4><p>Designed to work with different machine types.</p></div>
+      <div class="adv-item"><h4>Self-Learning</h4><p>Can learn machine operating behavior through data.</p></div>
+      <div class="adv-item"><h4>Real-Time</h4><p>Continuously monitors machine parameters.</p></div>
+      <div class="adv-item"><h4>Predictive</h4><p>Moves beyond simple monitoring toward failure prediction.</p></div>
+      <div class="adv-item"><h4>Scalable</h4><p>Designed for expansion from a prototype to multiple assets.</p></div>
+      <div class="adv-item"><h4>Easy To Deploy</h4><p>Modular hardware and software architecture.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FUTURE SCOPE ============ -->
+<section id="future" class="section section-dark">
+  <div class="section-inner">
+    <p class="section-eyebrow accent-text">15 — FUTURE SCOPE</p>
+    <h2 class="section-title">Roadmap</h2>
+    <span class="tag-badge">FUTURE SCOPE</span>
+    <div class="roadmap" id="roadmap">
+      <div class="road-item"><div class="road-phase">PHASE 01</div><div class="road-name">Prototype Monitoring</div></div>
+      <div class="road-item"><div class="road-phase">PHASE 02</div><div class="road-name">Advanced AI Models</div></div>
+      <div class="road-item"><div class="road-phase">PHASE 03</div><div class="road-name">Multi-Machine Digital Twins</div></div>
+      <div class="road-item"><div class="road-phase">PHASE 04</div><div class="road-name">Automated Predictive Maintenance</div></div>
+      <div class="road-item"><div class="road-phase">PHASE 05</div><div class="road-name">Industrial-Scale Deployment</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ IMPACT ============ -->
+<section id="impact" class="section">
+  <div class="section-inner">
+    <p class="section-eyebrow">16 — FROM DATA TO DECISIONS</p>
+    <h2 class="section-title">Impact</h2>
+    <div class="impact-grid">
+      <div class="impact-item"><div class="impact-num">01</div><h4>Sense</h4><p>Collect machine data.</p></div>
+      <div class="impact-item"><div class="impact-num">02</div><h4>Understand</h4><p>AI analyzes machine behavior.</p></div>
+      <div class="impact-item"><div class="impact-num">03</div><h4>Predict</h4><p>Identify potential problems before failure.</p></div>
+    </div>
+    <p class="impact-statement">UniTwin AI aims to transform conventional condition monitoring into intelligent, predictive asset management.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="nav-brand">UniTwin<span>AI</span></div>
+    <p>An AI-driven self-learning Digital Twin platform for predictive monitoring and maintenance of machines. Engineering prototype — built for academic and technical demonstration.</p>
+    <p class="footer-note">All dashboard and sensor readings on this site are SIMULATED PROTOTYPE DATA unless otherwise stated.</p>
+  </div>
+</footer>
+
+<!-- ============ FULL ARCHITECTURE MODAL ============ -->
+<div id="fullArchModal" class="modal">
+  <div class="modal-inner">
+    <button id="closeArchModal" class="modal-close">✕</button>
+    <h3>Full System Architecture</h3>
+    <div id="fullArchStage" class="full-arch-stage">
+      <svg id="fullArchSvg" viewBox="0 0 1400 320"></svg>
+    </div>
+    <p class="modal-hint">Scroll or pinch to zoom · Drag to pan · Hover a block for details</p>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="three-scene.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
