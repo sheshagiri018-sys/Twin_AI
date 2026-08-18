@@ -2,7 +2,7 @@
 
 An AI-driven, self-learning Digital Twin platform website for predictive monitoring and maintenance of machines. Built as a static, dependency-free site (HTML/CSS/JS) — ready for GitHub Pages.
 
-## Structure
+## Structure🚩
 ```
 index.html       → all page sections (hero, architecture, digital twin, dashboard, hardware, etc.)
 styles.css        → design tokens, section styles, custom cursor, 3D-mount/overlay styles
@@ -16,7 +16,7 @@ assets/
   prototype.png   → uploaded breadboard prototype photo
 ```
 
-## 3D / cinematic upgrade
+## 3D / cinematic upgrade👾
 - **Hero**: a procedurally built 3D industrial motor (Three.js, no external model files) with
   ambient rotation, cursor-driven camera parallax, a lightweight particle field, and live
   sensor markers (Temperature, Current, Voltage, Vibration, Humidity) projected onto the
@@ -51,7 +51,7 @@ No build step needed. Just open `index.html` in a browser, or serve the folder:
 npx serve .
 ```
 
-## Deploy on GitHub Pages
+## Deploy on GitHub Pages⭐
 1. Push this repo to GitHub.
 2. Repo Settings → Pages → Source: `main` branch, `/ (root)`.
 3. Your site will be live at `https://<username>.github.io/<repo>/`.
