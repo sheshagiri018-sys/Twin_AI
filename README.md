@@ -16,7 +16,7 @@ assets/
   prototype.png   → uploaded breadboard prototype photo
 ```
 
-## 3D / cinematic upgrade👾
+## 3D / cinematic upgrade👾!!!
 - **Hero**: a procedurally built 3D industrial motor (Three.js, no external model files) with
   ambient rotation, cursor-driven camera parallax, a lightweight particle field, and live
   sensor markers (Temperature, Current, Voltage, Vibration, Humidity) projected onto the
